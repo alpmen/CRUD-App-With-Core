@@ -1,0 +1,17 @@
+﻿@model CoreAppSinav.Models.Departmanlar
+@{
+    ViewData["Title"] = "YeniDepartman";
+    Layout = "~/Views/Depart/Index.cshtml";
+}
+
+<h1>Yeni Departman Ekle</h1>
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.DepartmanAd)
+    @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
+    @Html.LabelFor(x => x.Detay)
+    @Html.TextBoxFor(x => x.Detay, new { @class = "form-control" })
+
+    <button class="btn btn-info">Ekle</button>
+</form> 
+

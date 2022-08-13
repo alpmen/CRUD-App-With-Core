@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "PageDepartman";
+    Layout = "~/Views/Depart/Index.cshtml";
+}
+
+<h1>DEPARTMAN LİSTESİ</h1>
+
+
+<div>
+    <a href="/Depart/YeniDepartman" class="btn btn-success">Yeni Departman Ekle</a>
+</div>
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Departman Adı</th>
+            <th>Departman Detay</th>
+            <th style="width:100px">Güncelle</th>
+            <th style="width:100px">Sil</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.ID</td>
+                <td>@i.DepartmanAd</td>
+                <td>@i.Detay</td>
+                <td><a href="/Depart/GuncelleDepartman/?ID=@i.ID" class="btn btn-primary">Güncelle</a></td>
+                <td><a href="/Depart/SilDepartman/?ID=@i.ID" class="btn btn-danger">Sil</a></td>
+               
+            </tr>
+        }
+    </tbody>
+
+
+
+</table>
+
+
+

@@ -1,0 +1,22 @@
+﻿@model CoreAppSinav.Models.Departmanlar
+@{
+    ViewData["Title"] = "GuncelleDepartman";
+    Layout = "~/Views/Depart/Index.cshtml";
+}
+
+<h1>GuncelleDepartman</h1>
+
+<
+@using (Html.BeginForm("DepartmanGuncelle", "Depart", FormMethod.Post))
+{
+    <b>Departman ID</b>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+
+    <b>Departman Adı</b>
+    @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
+    <b>Departman Detayı</b>
+    @Html.TextBoxFor(x => x.Detay, new { @class = "form-control" })
+
+    <button class="btn btn-warning">Depart Güncelle</button>
+}
+
